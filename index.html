@@ -1,35 +1,38 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="vi">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Profile Information</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Web-to-Lead Form</title>
 </head>
 <body>
-    <header>
-        <h1>Welcome to My Profile</h1>
-    </header>
-    <main>
-        <div class="profile-card">
-            <img src="a.jpg" alt="Avatar" class="avatar">
-            <h1 class="name">Nguyễn Thanh Tùng</h1>
-            <p class="bio">A passionate developer and technology enthusiast.</p>
-            <ul class="facts">
-                <li>Loves coding and problem-solving</li>
-                <li>Enjoys hiking and photography</li>
-                <li>Speaks three languages</li>
-            </ul>
-            <div class="contact">
-                <h2>Contact Me</h2>
-                <p>Email: nguyenthanhtung29122003@gmail.com</p>
-                <p>Phone: (123) 456-7890</p>
-                <p>Website: <a href="#">www.johndoe.com</a></p>
-            </div>
-        </div>
-    </main>
-    <footer>
-        <p>&copy; 2025 Nguyễn Thanh Tùng. All rights reserved.</p>
-    </footer>
+    <h2>Đăng ký nhận tư vấn</h2>
+
+    <form action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8" method="POST">
+        <!-- Org ID của bạn (đây chỉ là ví dụ) -->
+        <input type="hidden" name="oid" value="00DgL000001BIab">
+        
+        <!-- Trang sẽ chuyển hướng đến sau khi khách hàng submit -->
+        <input type="hidden" name="retURL" value="https://www.sapo.vn/blog/thank-you-page-la-gi">
+
+        <!-- Các trường cần thu thập -->
+        <label for="first_name">First Name</label>
+        <input id="first_name" maxlength="40" name="first_name" size="20" type="text" /><br><br>
+
+        <label for="last_name">Last Name</label>
+        <input id="last_name" maxlength="80" name="last_name" size="20" type="text" /><br><br>
+
+        <label for="email">Email</label>
+        <input id="email" maxlength="80" name="email" size="20" type="text" /><br><br>
+
+        <label for="company">Company</label>
+        <input id="company" maxlength="40" name="company" size="20" type="text" /><br><br>
+
+        <label for="phone">Phone</label>
+        <input id="phone" maxlength="40" name="phone" size="20" type="text" /><br><br>
+
+        <!-- Nút Submit -->
+        <input type="submit" value="Gửi">
+    </form>
 </body>
 </html>
