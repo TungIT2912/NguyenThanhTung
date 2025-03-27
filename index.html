@@ -2,37 +2,51 @@
 <html lang="vi">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="Content-type" content="text/html; charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Web-to-Lead Form</title>
 </head>
 <body>
     <h2>Đăng ký nhận tư vấn</h2>
 
-    <form action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8" method="POST">
-        <!-- Org ID của bạn (đây chỉ là ví dụ) -->
-        <input type="hidden" name="oid" value="00DgL000001BIab">
-        
-        <!-- Trang sẽ chuyển hướng đến sau khi khách hàng submit -->
-        <input type="hidden" name="retURL" value="https://www.sapo.vn/blog/thank-you-page-la-gi">
+   <!--  ----------------------------------------------------------------------  -->
+<!--  NOTE: Please add the following <META> element to your page <HEAD>.      -->
+<!--  If necessary, please modify the charset parameter to specify the        -->
+<!--  character set of your HTML page.                                        -->
+<!--  ----------------------------------------------------------------------  -->
 
-        <!-- Các trường cần thu thập -->
-        <label for="first_name">First Name</label>
-        <input id="first_name" maxlength="40" name="first_name" size="20" type="text" /><br><br>
 
-        <label for="last_name">Last Name</label>
-        <input id="last_name" maxlength="80" name="last_name" size="20" type="text" /><br><br>
 
-        <label for="email">Email</label>
-        <input id="email" maxlength="80" name="email" size="20" type="text" /><br><br>
-
-        <label for="company">Company</label>
-        <input id="company" maxlength="40" name="company" size="20" type="text" /><br><br>
-
-        <label for="phone">Phone</label>
-        <input id="phone" maxlength="40" name="phone" size="20" type="text" /><br><br>
-
-        <!-- Nút Submit -->
-        <input type="submit" value="Gửi">
+    <!--  ----------------------------------------------------------------------  -->
+    <!--  NOTE: Please add the following <FORM> element to your page.             -->
+    <!--  ----------------------------------------------------------------------  -->
+    
+    <form action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8&orgId=00DgL000001BIab" method="POST">
+    
+    <input type=hidden name="oid" value="00DgL000001BIab">
+    <input type=hidden name="retURL" value="https://www.sapo.vn/blog/thank-you-page-la-gi">
+    
+    <!--  ----------------------------------------------------------------------  -->
+    <!--  NOTE: These fields are optional debugging elements. Please uncomment    -->
+    <!--  these lines if you wish to test in debug mode.                          -->
+    <!--  <input type="hidden" name="debug" value=1>                              -->
+    <!--  <input type="hidden" name="debugEmail"                                  -->
+    <!--  value="nguyenthanhtung29122003@gmail.com">                              -->
+    <!--  ----------------------------------------------------------------------  -->
+    
+    <label for="first_name">First Name</label><input  id="first_name" maxlength="40" name="first_name" size="20" type="text" /><br>
+    
+    <label for="last_name">Last Name</label><input  id="last_name" maxlength="80" name="last_name" size="20" type="text" /><br>
+    
+    <label for="email">Email</label><input  id="email" maxlength="80" name="email" size="20" type="text" /><br>
+    
+    <label for="company">Company</label><input  id="company" maxlength="40" name="company" size="20" type="text" /><br>
+    
+    <label for="phone">Phone</label><input  id="phone" maxlength="40" name="phone" size="20" type="text" /><br>
+    
+    <input type="submit" name="submit">
+    
     </form>
+    
 </body>
 </html>
